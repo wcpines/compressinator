@@ -62,8 +62,7 @@ describe 'run' do
       end
 
       it "should produce a file identical to the original input" do
-        # ignore auto trailing `\n` from Posix standard
-        expect(File.read('expanded.txt')).to eq(File.read(test_file).strip)
+        expect(File.read('expanded.txt')).to eq(File.read(test_file))
       end
     end
   end
