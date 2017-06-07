@@ -4,6 +4,7 @@ require_relative "../lib/wczip.rb"
 
 
 describe 'run' do
+  ignore_puts
 
   after(:all) do
     ["compressed.txt", "expanded.txt"].each do |name|
@@ -11,7 +12,6 @@ describe 'run' do
     end
   end
 
-  ignore_puts
   dir = File.dirname(__FILE__)
   test_file = "#{dir}/test_data.txt"
 
