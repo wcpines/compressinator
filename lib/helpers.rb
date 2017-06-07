@@ -1,5 +1,5 @@
 def usage_instructions
-  puts "Usage: `$ ruby plaid.rb <compress|expand> <file_name>.txt`"
+  puts "Usage: `$ bin/wczip <compress|expand> <file_name>.txt`"
 end
 
 
@@ -60,7 +60,7 @@ end
 
 def output_file(procedure, input_file, output)
   file_name = "#{procedure}.txt"
-  File.open(file_name, 'wb') { |f| f.write(output) }
+  File.open(file_name, 'w') { |f| f.write(output) }
   puts "##########################"
   puts "         STATS:"
   puts "##########################"

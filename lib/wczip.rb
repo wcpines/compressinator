@@ -16,5 +16,3 @@ def run
     output_file("expanded", input_file, output)
   end
 end
-
-run

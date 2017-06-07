@@ -4,7 +4,6 @@ def compress(file)
 
   data_string = check_and_read_input_file(file)
 
-  # NOTE: Logic starts here
   # init ascii/codeword symbol_table, e.g."e"=>101
   symbol_table = {}
   (0..255).each { |i| symbol_table[i.chr] = i }
@@ -19,5 +18,6 @@ def compress(file)
       symbol_table[test_string] = symbol_table.length # => e.g. 256 on first pass--new entry
       prefix_string = char
     end
-  end.pack("S*") # convert array of digits to binary so you don't just store ASCII of numbers
+  end.pack("S*") # convert array of digits to byte string so
+                 # you don't just store ASCII of numbers
 end
