@@ -6,7 +6,7 @@ This program provides two procedures for compressing text files, `compress` and 
 
 It takes 2 arguments: the desired procedure and an input file. e.g.
 
-`$ bin/wczip expand compressed.txt`
+`$ bin/wczip compress data.txt`
 
 
 To install, you will need ruby installed on your system. It should be compatible with any
